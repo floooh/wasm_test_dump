@@ -1,2 +1,2 @@
 #!/bin/sh
-em++ -fno-exceptions -fno-rtti -std=c++11 -stdlib=libc++ -fstrict-aliasing -O0 -g --memory-init-file 1 -s TOTAL_MEMORY=134217728 -s ERROR_ON_UNDEFINED_SYMBOLS=1 -s EXPORTED_FUNCTIONS="['_main','_enter_fullscreen','_enter_soft_fullscreen']" -s NO_EXIT_RUNTIME=1 -s NO_FILESYSTEM=1 -s DISABLE_EXCEPTION_CATCHING=1 -s WASM=1 -s 'BINARYEN_METHOD="native-wasm"' -O0 -g Shapes.bc shaders.bc  -o Shapes.html  libGfx.bc libAssets.bc libResource.bc libCore.bc
+em++ -std=c++11 -stdlib=libc++ -O0 -s WASM=1 Shapes.bc shaders.bc libGfx.bc libAssets.bc libResource.bc libCore.bc -o Shapes.html
